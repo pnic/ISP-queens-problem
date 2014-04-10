@@ -163,8 +163,7 @@ public class QueensLogic {
 
     private void addQueen(int col, int row) {
         BDD addQueen = factory.one();
-        rules = rules.restrict(addQueen.andWith(factory.ithVar(row * this.n
-                + col)));
+        rules = rules.restrict(addQueen.andWith(factory.ithVar(row * this.n + col)));
         board[col][row] = 1;
     }
 
